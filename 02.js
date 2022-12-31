@@ -12,8 +12,17 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  /*strings.sort(function (a, b) {
+    return b.length - a.length;
+  });
+  return strings[0];*/
+
+  return strings.reduce(
+    (accum, e) => (e.length > accum.length ? e : accum),
+    ""
+  );
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = stringMasLarga
+module.exports = stringMasLarga;
